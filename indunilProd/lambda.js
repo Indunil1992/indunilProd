@@ -112,5 +112,5 @@ exports.handler = function (event, context, callback) {
 
 
 
-    callback(null, { "message": "Successfully **+++123++++** executed" });
+    callback(null, { "message": "Successfully *222* executed" });
 }
