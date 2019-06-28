@@ -8,7 +8,8 @@
         "type": "DIRECTORY",
         "isDirectory": true,
         "children": [
-          "de39dee0-6b83-4df1-b138-933aa69db8de"
+          "de39dee0-6b83-4df1-b138-933aa69db8de",
+          "34ce490a-dca3-4c1c-8ba7-c4a10a742595"
         ],
         "isRemovable": false,
         "filePath": "indunilProd"
@@ -44,14 +45,34 @@
             "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
           }
         }
+      },
+      "34ce490a-dca3-4c1c-8ba7-c4a10a742595": {
+        "id": "34ce490a-dca3-4c1c-8ba7-c4a10a742595",
+        "parent": "90a430ff-987b-4355-a2d6-5aed98177664",
+        "name": "lambda2.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "indunilProd/lambda2.js",
+        "code": "let AWS = require('aws-sdk');\nconst s3 = new AWS.S3();\n\nexports.handler = function (event, context, callback) {\n\n    s3.getObject({\n        'Bucket': \"sample1234\",\n        'Key': \"check\"\n    }).promise()\n        .then(data => {\n            console.log(data);           // successful response\n            /*\n            data = {\n                AcceptRanges: \"bytes\", \n                ContentLength: 3191, \n                ContentType: \"image/jpeg\", \n                ETag: \"\\\\\"6805f2cfc46c0f04559748bb039d69ae\\\\\"\", \n                LastModified: <Date Representation>, \n                Metadata: {...}, \n                TagCount: 2, \n                VersionId: \"null\"\n            }\n            */\n        })\n        .catch(err => {\n            console.log(err, err.stack); // an error occurred\n        });\n\n\n\n    callback(null, { \"message\": \"Successfully executed without no errors\" });\n}",
+        "triggers": [],
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        }
       }
     },
     "deletedFiles": [],
     "rootNode": "90a430ff-987b-4355-a2d6-5aed98177664",
     "openFiles": [
-      "de39dee0-6b83-4df1-b138-933aa69db8de"
+      "de39dee0-6b83-4df1-b138-933aa69db8de",
+      "34ce490a-dca3-4c1c-8ba7-c4a10a742595"
     ],
-    "currentFileId": "de39dee0-6b83-4df1-b138-933aa69db8de",
+    "currentFileId": "34ce490a-dca3-4c1c-8ba7-c4a10a742595",
     "resources": {
       "apigusEast1Londonindunilqatstany": {
         "name": "apigusEast1Londonindunilqatstany",
@@ -153,6 +174,18 @@
           }
         },
         "globallyEditable": false
+      },
+      "s3sample1234": {
+        "name": "s3sample1234",
+        "type": "S3",
+        "config": {
+          "mode": 0,
+          "bucket": {
+            "region": "us-east-1",
+            "name": "sample1234"
+          }
+        },
+        "globallyEditable": false
       }
     },
     "customTemplate": {
@@ -187,7 +220,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561715636232
+    "lastSave": 1561715849762
   },
   "VCS_STATE": {
     "provider": "GitHub",
