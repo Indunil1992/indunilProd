@@ -1,0 +1,110 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "90a430ff-987b-4355-a2d6-5aed98177664": {
+        "id": "90a430ff-987b-4355-a2d6-5aed98177664",
+        "parent": null,
+        "name": "indunilProd",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "de39dee0-6b83-4df1-b138-933aa69db8de"
+        ],
+        "isRemovable": false,
+        "filePath": "indunilProd"
+      },
+      "de39dee0-6b83-4df1-b138-933aa69db8de": {
+        "id": "de39dee0-6b83-4df1-b138-933aa69db8de",
+        "parent": "90a430ff-987b-4355-a2d6-5aed98177664",
+        "name": "lambda.js",
+        "type": "LAMBDA_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "indunilProd/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n\n\n\n\n\n    \n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "triggers": [
+          {
+            "resourceName": "apigusEast1Londonindunilqatstany",
+            "config": {}
+          }
+        ],
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "testCases": {
+          "64c2a7ee-e0a0-47bc-ad2a-f7486f775011": {
+            "id": "64c2a7ee-e0a0-47bc-ad2a-f7486f775011",
+            "name": "Unnamed event",
+            "functionId": "de39dee0-6b83-4df1-b138-933aa69db8de",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "90a430ff-987b-4355-a2d6-5aed98177664",
+    "openFiles": [
+      "de39dee0-6b83-4df1-b138-933aa69db8de"
+    ],
+    "currentFileId": "de39dee0-6b83-4df1-b138-933aa69db8de",
+    "resources": {
+      "apigusEast1Londonindunilqatstany": {
+        "name": "apigusEast1Londonindunilqatstany",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "London",
+          "endpointType": "REGIONAL",
+          "resourceMode": 0,
+          "resourceName": "indunil/qa/tst",
+          "resourcePath": "/indunil/qa/tst",
+          "restMethod": "ANY",
+          "proxyIntegration": true,
+          "enableCORS": true,
+          "stageMode": 0,
+          "stageName": "prod"
+        },
+        "globallyEditable": false
+      }
+    },
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "indunilProd",
+    "projectDescription": "prod",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1561711378028
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "indunilProd",
+      "url": "https://github.com/Indunil1992/indunilProd"
+    }
+  }
+}
