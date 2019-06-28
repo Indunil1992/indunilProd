@@ -22,10 +22,10 @@
         "children": [],
         "isRemovable": true,
         "filePath": "indunilProd/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n\n\n\n\n\n    \n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "code": "exports.handler = function(event, context, callback) {\n\n\n\n\n\n    \n    \n    callback(null, {\"message\": \"Successfully **** executed\"});\n}",
         "triggers": [
           {
-            "resourceName": "apigusEast1Londonindunilqatstany",
+            "resourceName": "apigusEast1Londonindunilqatstget",
             "config": {}
           }
         ],
@@ -65,8 +65,27 @@
           "resourceName": "indunil/qa/tst",
           "resourcePath": "/indunil/qa/tst",
           "restMethod": "ANY",
-          "proxyIntegration": true,
-          "enableCORS": true,
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 0,
+          "stageName": "prod"
+        },
+        "globallyEditable": false
+      },
+      "apigusEast1Londonindunilqatstget": {
+        "name": "apigusEast1Londonindunilqatstget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 0,
+          "apiName": "London",
+          "endpointType": "REGIONAL",
+          "resourceMode": 0,
+          "resourceName": "indunil/qa/tst",
+          "resourcePath": "/indunil/qa/tst",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
           "stageMode": 0,
           "stageName": "prod"
         },
@@ -98,7 +117,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1561711378028
+    "lastSave": 1561711697645
   },
   "VCS_STATE": {
     "provider": "GitHub",
