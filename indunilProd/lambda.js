@@ -107,10 +107,10 @@ exports.handler = function (event, context, callback) {
         .catch(err => {
             console.log(err, err.stack); // an error occurred
         });
+ s3.
 
 
 
 
-
-    callback(null, { "message": "Successfully **+++=========++++** executed" });
+    callback(null, { "message": "Successfully **+++123++++** executed" });
 }
